@@ -5,7 +5,6 @@ from vega_datasets import data
 
 # Read in global data
 cars = data.cars()
-server = app.server
 
 # Setup app and layout/frontend
 app = Dash(__name__,  external_stylesheets=['https://codepen.io/chriddyp/pen/bWLwgP.css'])
@@ -31,3 +30,4 @@ def plot_altair(xcol):
 
 if __name__ == '__main__':
     app.run_server(debug=True)
+server = app.server
