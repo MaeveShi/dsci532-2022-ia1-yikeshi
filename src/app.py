@@ -5,6 +5,7 @@ from vega_datasets import data
 
 # Read in global data
 cars = data.cars()
+server = app.server
 
 # Setup app and layout/frontend
 app = Dash(__name__,  external_stylesheets=['https://codepen.io/chriddyp/pen/bWLwgP.css'])
