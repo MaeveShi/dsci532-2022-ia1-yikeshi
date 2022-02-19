@@ -14,7 +14,7 @@ app.layout = html.Div([
         style={'border-width': '0', 'width': '80%', 'height': '400px'}),
     dcc.Dropdown(
         id='xcol-widget',
-        value='Horsepower',  # REQUIRED to show the plot on the first page load
+        value='sepalLength',  # REQUIRED to show the plot on the first page load
         options=[{'label': col, 'value': col} for col in iris.columns[0:4]])])
 
 # Set up callbacks/backend
