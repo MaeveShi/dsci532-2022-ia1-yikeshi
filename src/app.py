@@ -9,10 +9,11 @@ iris = data.iris()
 # Setup app and layout/frontend
 app = Dash(__name__,  external_stylesheets=['https://codepen.io/chriddyp/pen/bWLwgP.css'])
 server = app.server
+
 app.layout = html.Div([
     html.Iframe(
         id='scatter',
-        style={'border-width': '0', 'width': '100%', 'height': '400px'}),
+        style={'border-width': '0', 'width': '100%', 'height': '500px'}),
     dcc.Dropdown(
         id='xcol-widget',
         value='sepalLength',  # REQUIRED to show the plot on the first page load
@@ -24,8 +25,8 @@ app.layout = html.Div([
     Input('xcol-widget', 'value'))
 def plot_altair(xcol):
     chart = alt.Chart(iris).mark_point().encode(
-        x=xcol,
-        y='species',
+        x='species',
+        y=xcol,
         tooltip='sepalLength').interactive()
     return chart.to_html()
 
