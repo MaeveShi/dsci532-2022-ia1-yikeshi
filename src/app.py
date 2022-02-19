@@ -11,7 +11,7 @@ app = Dash(__name__,  external_stylesheets=['https://codepen.io/chriddyp/pen/bWL
 app.layout = html.Div([
     html.Iframe(
         id='scatter',
-        style={'border-width': '0', 'width': '80%', 'height': '400px'}),
+        style={'border-width': '0', 'width': '100%', 'height': '400px'}),
     dcc.Dropdown(
         id='xcol-widget',
         value='sepalLength',  # REQUIRED to show the plot on the first page load
