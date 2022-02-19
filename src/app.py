@@ -8,6 +8,7 @@ iris = data.iris()
 
 # Setup app and layout/frontend
 app = Dash(__name__,  external_stylesheets=['https://codepen.io/chriddyp/pen/bWLwgP.css'])
+server = app.server
 app.layout = html.Div([
     html.Iframe(
         id='scatter',
@@ -30,5 +31,3 @@ def plot_altair(xcol):
 
 if __name__ == '__main__':
     app.run_server(debug=True)
-server = app.server
-
